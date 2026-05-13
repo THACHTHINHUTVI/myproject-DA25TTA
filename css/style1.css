@@ -1,0 +1,80 @@
+/*css thong tin ca nhan*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9370DB;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+/*bảng thông tin chính*/
+.container {
+    width: 70%;
+    background: #6a1b9a;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    color: white;
+td, th {
+    border: 3px solid #333333; 
+}
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.info-table {
+    width: 100%;
+    background-color: #f5f5dc; 
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden; 
+    color: #333;         
+}
+
+.info-table td {
+    border: 1px solid #d2b48c;
+    padding: 15px;
+}
+
+.avatar-cell {
+    text-align: center;
+    width: 140px;
+}
+
+.avatar-cell img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #6a1b9a;
+    object-fit: cover;
+}
+
+.highlight-text {
+    color: #b71c1c;
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.section h3 {
+    color: #ffeb3b;
+    border-bottom: 2px solid #ffeb3b;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}

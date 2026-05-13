@@ -1,0 +1,19 @@
+	<!DOCTYPE html>
+	<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<tile>thông tin cá nhân</title>
+		</head>
+	<body>
+	<div class ="container">
+		<h3>THẠCH THỊ NHỰT VI</h3>
+		<p>thông tin cá nhân</p>
+	<table>
+		<tr>
+			<td>
+				<mg src="../">
+			</td>
+			<td>
+				<p><b>Gioiws thiệu bản thân</b></P>
+				<p>xin chao tên là <b>thạch thị nhựt vi</b>,sinh viên ngành ,b>công nghệ thông tin</b>.tô yêu thích ngành lập trình và thiết kế web</i>.
+				mục đích cua tôi  
