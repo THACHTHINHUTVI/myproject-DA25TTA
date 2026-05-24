@@ -1,0 +1,53 @@
+
+/* viết mã css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: blue;
+}
+
+div.container {
+    margin: 15px 150px;
+    background-color:#ffcccc  ;
+    padding: 25px;
+    display: flex; /* Thêm dòng này để hỗ trợ căn giữa */
+}
+
+#title {
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+form#frmLogin {
+    background-color:#ffd9cc ;
+    padding: 30px;
+    width: 600px;  /* Thay max-width bằng width để cố định khung */
+    margin: auto;  /* Dòng then chốt để căn giữa khung nâu */
+}
+
+div.form-group {
+    width: 100%;   /* Để nội dung bên trong co giãn theo form */
+    margin-bottom: 10px;
+}
+
+input.form-control {
+    width: 100%;
+    margin: 7px 0px;
+}
+
+input.button{
+    padding: 2px;
+    background-color:#ffcccc ;
+    width: 100px;
+    color:white ;
+}
+

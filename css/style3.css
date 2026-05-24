@@ -1,0 +1,70 @@
+/* Viết mã css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Giúp căn chỉnh kích thước chuẩn xác hơn */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color:#ff9999 ; /* Màu nền trang nhẹ nhàng */
+    display: flex;             /* Kích hoạt flexbox */
+    justify-content: center;    /* Căn giữa theo chiều ngang */
+    align-items: center;        /* Căn giữa theo chiều dọc */
+    min-height: 100vh;          /* Chiều cao bằng toàn bộ màn hình */
+}
+
+.container {
+    background-color:#ac5353 ;    /* Màu khung trắng */
+    padding: 30px;
+    border-radius: 10px;        /* Bo góc khung */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Đổ bóng cho "sịn" */
+    width: 500px;               /* Độ rộng của khung */
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;               /* Cố định độ rộng label để các ô input thẳng hàng */
+    font-weight: bold;
+}
+
+.dinhdang1 {
+    width: calc(100% - 130px);  /* Ô input chiếm phần còn lại của khung */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Căn chỉnh cho phần select và textarea */
+select, textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    display: block;
+    margin: 20px auto 0;        /* Căn giữa nút bấm trong khung */
+    padding: 10px 25px;
+    background-color :#d6d6c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color:#b3b3ff;
+}

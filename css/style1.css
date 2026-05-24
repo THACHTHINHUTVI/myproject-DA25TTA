@@ -1,55 +1,72 @@
-/*css thong tin ca nhan*/
-body {
-    font-family: Arial, sans-serif;
-    background-color: #9370DB;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+body {/* bảng ngoài cùng*/
+    font-family: Arial, sans-serif;/*pgoong chữ*/
+    background-color:#ffb3b3;
+    display: flex;/*căn chỉnh linh hoạt màn hình*/
+    justify-content: center; /*căn giữa chiều ngang*/
+	align-items: center;     /* Căn giữa theo chiều dọc */
+    padding: 20px;/*tạo khoảng đệm cho khung nhỏ lại hoặc bự ra*/
+	 min-height: 100vh;       /* Lấy hết chiều cao màn hình */
+    margin: 0;
 }
 /*bảng thông tin chính*/
 .container {
-    width: 70%;
-    background: #6a1b9a;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    color: white;
+	text-align: center;      /* Căn giữa chữ và ảnh bên trong */
+    width: 70%;/*chiều rộng của cái khung bên trong*/
+    background:#ffccb3 ;
+   padding: 30px;/*Tạo khoảng cách trống giữa nội dung bên trong và mép viền*/
+   border-radius: 20px;/* bo  khung bên trong*/
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);/*tạo bóng*/
+    color:#331100 ; /*màu chữ*/
+	max-width: 600px;        /* Độ rộng tối đa của bảng */
 td, th {
-    border: 3px solid #333333; 
+   border: 1px solid #333333; /*khung cho chữ*/
+   border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 }
-
+table {
+    margin: 0 auto;          /* Căn chính cái bảng ra giữa */
+    border-collapse: collapse;
+	
+}
 h2 {
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    text-align: center;/*can chữ giữa văn bản*/
+   text-transform: uppercase;/*tu dong chuyen sang chu in hoa*/
+    margin-bottom: 20px;/*tao khoang cach tiêu de va cai bang*/
 }
 
 .info-table {
     width: 100%;
-    background-color: #f5f5dc; 
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden; 
+   background-color: #f5f5dc; 
+    border-collapse:separate ;/*tạo dg vien cho hai khung*/
+    border-radius: 10px;/*bo  tron 4 goc*/
+    overflow: hidden; /*cat got khong loi ra ngoai*/
     color: #333;         
 }
 
-.info-table td {
+.info-table td {/*tao vien,solid khong phai net dut,mau*/
     border: 1px solid #d2b48c;
-    padding: 15px;
+    padding: 12 20pxpx;/*tạo khoang trống chu va ô*/
+	border-radius: 30px;
 }
 
 .avatar-cell {
     text-align: center;
     width: 140px;
+	 border: none !important;      /* Xóa viền khung đen */
+    background: transparent !important; /* Xóa luôn nền (nếu có) */
+    text-align: center;
 }
 
 .avatar-cell img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 140px;/*hai cái la kich thuoc anh*/
+    height: 140px;
+    border-radius: 50%; /*tron tuyet doi*/
     border: 3px solid #6a1b9a;
-    object-fit: cover;
+    object-fit: cover;/*giup anh ko bi mop hay keo dãn*/
+	display: block;             /* Giúp căn chỉnh chuẩn hơn */
+    margin: 0 auto;             /* Căn giữa ảnh */
+	
 }
 
 .highlight-text {

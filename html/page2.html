@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    
-    <title>Sinh viên | Thông tin cá nhân</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Trang số 2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style2.css">
 </head>
 <body>
-    <div class="student-card">
-        <div class="card-header">
-            <h2>THÔNG TIN SINH VIÊN</h2>
-        </div>
-        
-        <div class="card-body">
-            <div class="info-row">
-                <span class="label">Họ và tên:</span>
-                <span class="value">thạch thi nhut vi</span>
+    <div class="container">
+        <form id="frmLogin">
+            <h2 id="title">Login</h2>
+            
+            <div class="form-group">
+                <label for="txtUsername">Username:</label>
+                <input class="form-control" type="text" id="txtUsername" name="txtUsername">
             </div>
-            <div class="info-row">
-                <span class="label">Mã số SV:</span>
-                <span class="value">110125207</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Trường:</span>
-                <span class="value">ĐẠI HỌC TRÀ VINH</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Ngành học:</span>
-                <span class="value">Công nghệ thông tin</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Niên khóa:</span>
-                <span class="value">2025 - 2029</span>
-            </div>
-        </div>
 
-        <div class="card-footer">
-            <p>Trạng thái: Đang học</p>
-        </div>
+            <div class="form-group">
+                <label for="txtPassword">Password:</label>
+                <input type="password" id="txtPassword" name="txtPassword">
+            </div>
+
+            <input type="submit" id="sbLogin" name="sbLogin" value="Login">
+            <input type="reset" id="rsCancel" name="rsCancel" value="Cancel">
+        </form>
     </div>
 </body>
 </html>
