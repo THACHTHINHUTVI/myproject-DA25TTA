@@ -1,0 +1,50 @@
+body{
+	font-family: Arial, sans-serif;
+	background-color: #bfbfbf;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+
+
+table{
+	width: 800px;
+	border-collapse: collapse;
+	background: white;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+
+th{
+	background-color:#ccccff;
+	color: white;
+	padding: 12px;
+	font-size: 16px;
+}
+
+
+td{
+	padding: 10px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+
+tr:hover{
+	background-color: #ffccff;
+}
+
+
+tr:last-child{
+	font-weight: bold;
+	background-color: #e8f0fe;
+	font-size: 18px;
+}
+
+
+#thanhtoan{
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
