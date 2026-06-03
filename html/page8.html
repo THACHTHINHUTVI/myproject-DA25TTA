@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Thiết kế trang giới thiệu thông tin sản phẩm </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <div class="container">
+      <div id ="product-list" >
+        <!--chứa danh sách các sản phẩm-->
+      </div> 
+      </div>
+      <script>
+        //xác định khung chứa product-list
+        const lisProducts = doccument.getElementById("product-list");//tác động đén thẻ <div>có id ="product-list"
+        //tạo 1 cotainer có class ="item"
+        const item = documet.createElement("div"); //<div></div>
+        item.setAttribute("class","item");//<div class="item"</div>
+            //tạo 2 khung chứ hình ảnh và thông tin
+            // tạo 1 container chứa hình ảnh có class = "image" ==> chỉ có 1 con là <img>
+            const containerImage = document.createElemet("div"); //<div></div>
+            containerImage.setAttribute("class","image");//<div class = "image"></div>
+            //tạo ảnh
+            const img = document.createElement("img");
+            img.setAttribute("src","../assets/images/rose.webp");
+            //dưa vào khung chứa ảnh
+            //tạo 1 containet cứa  hình ảnh và thông tin
+            const containerInfo = document.createElement("div");//<div></div>
+            containerInfo.setAttribute("class","info"); //<div class = "info"></div>
+            //thêm item vào list product
+            listProducts.appendChild(item);
+            listProducts.setAttribute("style","color:red; background-color:green;");
+            img.setAttribute("src","../assets/ images/rose.webp");
+            img.setAttribute("alt","hoa hồng pháp");
+            img.setAttribute("style","width:100%: mã-width:150px");
+            // đưa vào khung chứa ảnh
+            containerImage.appendChild(img);
+            //tạo 1 container chứa thông tin sản phẩm có class = "ifno" ==> có 3 <p> và 1 <a>
+                const contanerInfo = document.createElemen("div");//<div></div>
+                //tạo <p> chứa tên sản phẩm
+                    const description = doccumet.createElement("p");
+                    linkProduct.innerHTML = " xem chi tiết ";
+                    linkProduct.setAttribute("href","page6.html");//sửa sau */
+                    // gần 4 con vào khung chứa Info
+                    conainerInffo.appendChild(nameProduct);
+                    conainerInffo.appendChild(price);
+                    conainerInffo.appendChild(décription);
+                    containerInof.appendChild(linkProduct);
+                    // thêm khung chứa image vào item
+                    item.appendChild(containerImage);
+                    item.appendChild(contanerInfo);
+
+      </script>
+</body>
+</html>
