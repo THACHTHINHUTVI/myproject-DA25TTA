@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <title>Thiết kế trang giới thiệu thông tin sản phẩm </title>
+    <title>Thiết kế trang giới thiệu thông tin sản phẩm</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style2.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="container">
-      <div id ="product-list" >
-        <!--chứa danh sách các sản phẩm-->
-      </div> 
-      </div>
-      <script>
-        //xác định khung chứa product-list
-        const lisProducts = doccument.getElementById("product-list");//tác động đén thẻ <div>có id ="product-list"
-        //tạo 1 cotainer có class ="item"
-        const item = documet.createElement("div"); //<div></div>
-        item.setAttribute("class","item");//<div class="item"</div>
-            //tạo 2 khung chứ hình ảnh và thông tin
-            // tạo 1 container chứa hình ảnh có class = "image" ==> chỉ có 1 con là <img>
-            const containerImage = document.createElemet("div"); //<div></div>
-            containerImage.setAttribute("class","image");//<div class = "image"></div>
-            //tạo ảnh
-            const img = document.createElement("img");
-            img.setAttribute("src","../assets/images/rose.webp");
-            //dưa vào khung chứa ảnh
-            //tạo 1 containet cứa  hình ảnh và thông tin
-            const containerInfo = document.createElement("div");//<div></div>
-            containerInfo.setAttribute("class","info"); //<div class = "info"></div>
-            //thêm item vào list product
-            listProducts.appendChild(item);
-            listProducts.setAttribute("style","color:red; background-color:green;");
-            img.setAttribute("src","../assets/ images/rose.webp");
-            img.setAttribute("alt","hoa hồng pháp");
-            img.setAttribute("style","width:100%: mã-width:150px");
-            // đưa vào khung chứa ảnh
-            containerImage.appendChild(img);
-            //tạo 1 container chứa thông tin sản phẩm có class = "ifno" ==> có 3 <p> và 1 <a>
-                const contanerInfo = document.createElemen("div");//<div></div>
-                //tạo <p> chứa tên sản phẩm
-                    const description = doccumet.createElement("p");
-                    linkProduct.innerHTML = " xem chi tiết ";
-                    linkProduct.setAttribute("href","page6.html");//sửa sau */
-                    // gần 4 con vào khung chứa Info
-                    conainerInffo.appendChild(nameProduct);
-                    conainerInffo.appendChild(price);
-                    conainerInffo.appendChild(décription);
-                    containerInof.appendChild(linkProduct);
-                    // thêm khung chứa image vào item
-                    item.appendChild(containerImage);
-                    item.appendChild(contanerInfo);
+        <div id="product-list">
+            <!-- Chứa danh sách các sản phẩm -->
+        </div>
+    </div>
 
-      </script>
+    <script>
+        // Xác định khung chứa product-list
+        const listProducts = document.getElementById("product-list"); // Tác động đến thẻ <div> có id = "product-list"
+
+        // Tạo 1 container có class = "item"
+        const item = document.createElement("div"); // <div></div>
+        item.setAttribute("class", "item card p-3"); // <div class="item card"></div>
+		item.style.backgroundColor = "#FFFDD0";
+        // Tạo 2 khung chứa Hình ảnh và Thông tin
+        // Tạo 1 container chứa hình ảnh có class = "Image" -> chỉ có 1 con là <img>
+        const containerImage = document.createElement("div"); // <div></div>
+        containerImage.setAttribute("class", "Image"); // <div class="Image"></div>
+
+        // Tạo ảnh
+        const img = document.createElement("img");
+        img.setAttribute("src", "../assets/images/hoa-cam-tu-cau-co-bao-nhieu-mau.jpg");
+        img.setAttribute("alt", "cẩm tú cầu");
+        img.setAttribute("style", "width:100%; max-width:150px;");
+        img.setAttribute("class", "card-img-top rounded-circle");
+
+        // Đưa vào khung chứa ảnh
+        containerImage.appendChild(img);
+
+        // Tạo 1 container chứa thông tin sản phẩm có class = "Info" -> có 3 <p> và 1 <a>
+        const containerInfo = document.createElement("div"); // <div></div>
+        containerInfo.setAttribute("class", "Info card-body"); // <div class="Info card-body"></div>
+
+        // Tạo 1 <h2> chứa tên sản phẩm
+        const nameProduct = document.createElement("h2");
+        nameProduct.innerHTML = "vườn hoa cẩm tú cầu";
+        nameProduct.setAttribute("class", "card-title text-danger");
+
+        // Tạo <p> chứa giá sản phẩm
+        const price = document.createElement("p");
+        price.innerHTML = "250đ/gói";
+
+        // Tạo <p> chứa mô tả sản phẩm (Đã sửa lỗi cú pháp chuỗi của ảnh 2)
+        const description = document.createElement("p");
+        description.innerHTML = "Hoa cẩm tú cầu là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân";
+
+        // Tạo <a> chứa liên kết
+        const linkProduct = document.createElement("a");
+        linkProduct.innerHTML = "Xem chi tiết";
+        linkProduct.setAttribute("href", "page2.html");
+        linkProduct.setAttribute("class", "btn btn-info");
+
+        // Đưa các thành phần vào khung chứa Info
+        containerInfo.appendChild(nameProduct);
+        containerInfo.appendChild(price);
+        containerInfo.appendChild(description);
+        containerInfo.appendChild(linkProduct);
+
+        // Thêm khung chứa Image vào item
+        item.appendChild(containerImage);
+        item.appendChild(containerInfo);
+
+        // Thêm item vào list product
+        listProducts.appendChild(item);
+    </script>
 </body>
 </html>
