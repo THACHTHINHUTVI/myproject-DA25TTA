@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Trang số 2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <div class="container" ID = "container">
+        <img src = "" alt ="" id = "image">
+        <p id = "name"></p>
+        <p id = "price"></p>
+        <p id = "description"></p>
+        </div>
+        <script>
+            // 1. lấy id từ URL
+            const urlParám = new URLSearchParans(window.location.search);
+            const productId = urlParams.get('id');
+
+            const founsProducts.find (obj.d === productId);
+
+
+            if(foundProduct) {
+                document.getElementById('name').innerText = foundProduct.name;
+                 document.getElementById('price').innerText = foundProduct.price + "/túi";
+                  document.getElementById('deccription').innerText = foundProduct.deccription;
+                   document.getElementById('image').innerText = foundProduct.image;
+                 document.getElementById('image').innerText = foundProduct.name;
+
+            }else {
+                document.getElementById('container').innerHTML = <h2>sản phẩm không tồn tại hoặc đã bị xóa!<h2><a href= "../index.html">Quay trở lại trang
+                }
+        </script>
+</body>
+</html>
