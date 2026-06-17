@@ -4,32 +4,37 @@
     <title>Trang số 2</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style2.css">
+	
 </head>
 <body>
-    <div class="container" ID = "container">
-        <img src = "" alt ="" id = "image">
-        <p id = "name"></p>
-        <p id = "price"></p>
-        <p id = "description"></p>
-        </div>
-        <script>
-            // 1. lấy id từ URL
-            const urlParám = new URLSearchParans(window.location.search);
-            const productId = urlParams.get('id');
+<a href="html/page2.html"></a>
+    <div class="container" id="container">
+        
+        <img src="" alt="" id="image">
+        <p id="name"></p>
+        <p id="price"></p>
+        <p id="description"></p>
+    </div>
+    <script>
+        // 1. Lấy ID từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('masp');
 
-            const founsProducts.find (obj.d === productId);
+        // 2. Tìm sản phẩm trong mảng dựa vào ID vừa lấy
+        const foundProduct = products.find(obj => obj.id === productId);
 
-
-            if(foundProduct) {
-                document.getElementById('name').innerText = foundProduct.name;
-                 document.getElementById('price').innerText = foundProduct.price + "/túi";
-                  document.getElementById('deccription').innerText = foundProduct.deccription;
-                   document.getElementById('image').innerText = foundProduct.image;
-                 document.getElementById('image').innerText = foundProduct.name;
-
-            }else {
-                document.getElementById('container').innerHTML = <h2>sản phẩm không tồn tại hoặc đã bị xóa!<h2><a href= "../index.html">Quay trở lại trang
-                }
-        </script>
+        // 3. Hiển thị dữ liệu ra giao diện
+        if (foundProduct) {
+            // Giả sử trong file chi-tiet.html bạn đã có sẵn các thẻ với id tương ứng
+            document.getElementById('name').innerText = foundProduct.name;
+            document.getElementById('price').innerText = foundProduct.price + "/túi";
+            document.getElementById('description').innerText = foundProduct.description;
+            document.getElementById('image').src = foundProduct.image;
+            document.getElementById('image').alt = foundProduct.name;
+        } else {
+            // Trường hợp URL bậy bạ hoặc không tìm thấy ID phù hợp
+            document.getElementById("container").innerHTML = `<h2>Sản phẩm không tồn tại hoặc đã bị xóa!</h2><a href="../index.html">Quay lại trang chủ</a>`;
+        }
+    </script>
 </body>
 </html>

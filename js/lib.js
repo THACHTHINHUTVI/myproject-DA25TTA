@@ -2,24 +2,27 @@
 //khai báo 1 đối tưởng lưu thông tin sản phẨM
 
 // Khai báo 1 đối tượng lưu thông tin sản phẩm (Trang cá nhân)
-const product = {
-    name: "hoa cẩm tú cầu",
+const product ={
+	id: "1",
+    name: "hoa tulip",
     price: 250,
-    description: "Hoa cẩm tú cầu là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
-    image: "../assets/images/hoa-cam-tu-cau-co-bao-nhieu-mau.jpg",
+    description: "Hoa tulip là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
+    image: "../assets/images/tulip.jpg",
     link: "chi-tiet.html"
-};
+ };
 
 // Mảng chứa danh sách các sản phẩm
 const products = [
     {
+		id: "2",
         name: "hoa mẫu đơn",
         price: 250,
         description: "Hoa mẫu đơn được mệnh danh là 'vua của các loài hoa', đại diện cho sự vương giả, phú quý, giàu sang và quyền uy đỉnh cao. Trong văn hóa tình yêu, loài hoa này là biểu tượng mạnh mẽ của một cuộc hôn nhân hạnh phúc, sự thủy chung son sắt và bách niên giai lão. Không chỉ vậy, những cánh hoa xếp tầng kiêu sa còn mang thông điệp về vẻ đẹp thanh cao, lòng bao dung của người mẹ và sự tôn kính, biết ơn sâu sắc.",
         image: "../assets/images/mẫu đơn 2.jfif",
         link: "chi-tiet.html"
     },
-    {
+    {	
+	id: "3",
         name: "hoa mẫu đơn",
         price: 300,
         description: "Hoa mẫu đơn được mệnh danh là 'vua của các loài hoa', đại diện cho sự vương giả, phú quý, giàu sang và quyền uy đỉnh cao. Trong văn hóa tình yêu, loài hoa này là biểu tượng mạnh mẽ của một cuộc hôn nhân hạnh phúc, sự thủy chung son sắt và bách niên giai lão. Không chỉ vậy, những cánh hoa xếp tầng kiêu sa còn mang thông điệp về vẻ đẹp thanh cao, lòng bao dung của người mẹ và sự tôn kính, biết ơn sâu sắc.",
@@ -27,6 +30,7 @@ const products = [
         link: "chi-tiet.html"
     },
     {
+		id: "4",
         name: "hoa cẩm tú cầu",
         price: 230,
         description: "Hoa cẩm tú cầu là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
@@ -34,6 +38,7 @@ const products = [
         link: "chi-tiet.html"
     },
     {
+		id: "5",
         name: "hoa cẩm tú cầu",
         price: 250,
         description: "Hoa cẩm tú cầu là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
@@ -80,7 +85,7 @@ function createItem(obj) {
 
     // Tạo <p> chứa giá sản phẩm
     const price = document.createElement("p");
-    price.innerHTML = obj.price + " / gói";
+    price.innerHTML = obj.price + "/ gói";
 
     // Tạo <p> chứa mô tả sản phẩm 
     const description = document.createElement("p");
@@ -89,7 +94,7 @@ function createItem(obj) {
     // Tạo <a> chứa liên kết
     const linkProduct = document.createElement("a");
     linkProduct.innerHTML = "Xem chi tiết";
-    linkProduct.setAttribute("href", obj.link);
+    linkProduct.setAttribute("href", obj.link+"?id="+obj.id);
     linkProduct.setAttribute("class", "btn btn-info");
 
     // Đưa các thành phần vào khung chứa Info
