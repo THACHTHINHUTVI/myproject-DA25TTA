@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <title>Trang số 2</title>
+    <title>trang chi tiết</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/style1.css">
 	
 </head>
 <body>
-<a href="html/page2.html"></a>
+
     <div class="container" id="container">
         
         <img src="" alt="" id="image">
@@ -15,14 +15,17 @@
         <p id="price"></p>
         <p id="description"></p>
     </div>
+     <a href="page8.html">quay trở lại</a>
+     <script src="../js/lib.js"></script>
+
     <script>
         // 1. Lấy ID từ URL
         const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('masp');
+        const productId = urlParams.get('id');
 
         // 2. Tìm sản phẩm trong mảng dựa vào ID vừa lấy
         const foundProduct = products.find(obj => obj.id === productId);
-
+                
         // 3. Hiển thị dữ liệu ra giao diện
         if (foundProduct) {
             // Giả sử trong file chi-tiet.html bạn đã có sẵn các thẻ với id tương ứng
@@ -31,7 +34,9 @@
             document.getElementById('description').innerText = foundProduct.description;
             document.getElementById('image').src = foundProduct.image;
             document.getElementById('image').alt = foundProduct.name;
-        } else {
+        } 
+        
+        else {
             // Trường hợp URL bậy bạ hoặc không tìm thấy ID phù hợp
             document.getElementById("container").innerHTML = `<h2>Sản phẩm không tồn tại hoặc đã bị xóa!</h2><a href="../index.html">Quay lại trang chủ</a>`;
         }

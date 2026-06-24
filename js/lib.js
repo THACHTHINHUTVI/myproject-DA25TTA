@@ -2,23 +2,29 @@
 //khai báo 1 đối tưởng lưu thông tin sản phẨM
 
 // Khai báo 1 đối tượng lưu thông tin sản phẩm (Trang cá nhân)
-const product ={
+
+// Mảng chứa danh sách các sản phẩm
+const products = [
+    {
 	id: "1",
     name: "hoa tulip",
     price: 250,
     description: "Hoa tulip là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
     image: "../assets/images/tulip.jpg",
-    link: "chi-tiet.html"
- };
+         detail: `<p>Hoa tulip (hay uất kim hương) là loài hoa nổi tiếng thế giới bởi vẻ đẹp thanh lịch, kiêu sa và có hình dáng độc đáo giống như một chiếc chuông úp ngược hoặc chiếc ly nhỏ xinh.</p>
+    <p>Loài hoa thân củ này có nguồn gốc từ vùng Trung Á, nhưng ngày nay lại được biết đến nhiều nhất như một biểu tượng kiêu hãnh của đất nước Hà Lan.</p>`,
 
-// Mảng chứa danh sách các sản phẩm
-const products = [
+    link: "chi-tiet.html"
+    },
     {
 		id: "2",
         name: "hoa mẫu đơn",
         price: 250,
         description: "Hoa mẫu đơn được mệnh danh là 'vua của các loài hoa', đại diện cho sự vương giả, phú quý, giàu sang và quyền uy đỉnh cao. Trong văn hóa tình yêu, loài hoa này là biểu tượng mạnh mẽ của một cuộc hôn nhân hạnh phúc, sự thủy chung son sắt và bách niên giai lão. Không chỉ vậy, những cánh hoa xếp tầng kiêu sa còn mang thông điệp về vẻ đẹp thanh cao, lòng bao dung của người mẹ và sự tôn kính, biết ơn sâu sắc.",
         image: "../assets/images/mẫu đơn 2.jfif",
+        detail: `<p>Hoa mẫu đơn được mệnh danh là 'vua của các loài hoa' bởi vẻ đẹp lộng lẫy, kiêu sa với những lớp cánh hoa dày xếp chồng lên nhau như những dải lụa mềm mại bồng bềnh.</p>
+<p>Loài hoa này có lịch sử lâu đời từ vùng Đông Á, là biểu tượng kinh điển của sự vương giả, phú quý, giàu sang và mang lời chúc bách niên giai lão cho hạnh phúc hôn nhân viên mãn.</p>`,
+
         link: "chi-tiet.html"
     },
     {	
@@ -27,6 +33,9 @@ const products = [
         price: 300,
         description: "Hoa mẫu đơn được mệnh danh là 'vua của các loài hoa', đại diện cho sự vương giả, phú quý, giàu sang và quyền uy đỉnh cao. Trong văn hóa tình yêu, loài hoa này là biểu tượng mạnh mẽ của một cuộc hôn nhân hạnh phúc, sự thủy chung son sắt và bách niên giai lão. Không chỉ vậy, những cánh hoa xếp tầng kiêu sa còn mang thông điệp về vẻ đẹp thanh cao, lòng bao dung của người mẹ và sự tôn kính, biết ơn sâu sắc.",
         image: "../assets/images/mẫu đơn.webp",
+        detail: `<p>Hoa mẫu đơn được mệnh danh là 'vua của các loài hoa' bởi vẻ đẹp lộng lẫy, kiêu sa với những lớp cánh hoa dày xếp chồng lên nhau như những dải lụa mềm mại bồng bềnh.</p>
+<p>Loài hoa này có lịch sử lâu đời từ vùng Đông Á, là biểu tượng kinh điển của sự vương giả, phú quý, giàu sang và mang lời chúc bách niên giai lão cho hạnh phúc hôn nhân viên mãn.</p>`,
+
         link: "chi-tiet.html"
     },
     {
@@ -35,6 +44,9 @@ const products = [
         price: 230,
         description: "Hoa cẩm tú cầu là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
         image: "../assets/images/camtucau.jpg",
+        detail: `<p>Hoa cẩm tú cầu gây ấn tượng đặc biệt bởi khả năng đổi màu sắc kỳ diệu từ xanh, hồng, tím cho đến trắng tùy thuộc vào độ pH của đất trồng.</p>
+<p>Với kết cấu hàng trăm bông hoa nhỏ bốn cánh đan cài khăng khít tạo thành một khối cầu viên mãn, loài hoa này là biểu tượng tuyệt vời cho sự thấu hiểu sâu sắc, lòng biết ơn chân thành và tình cảm gia đình gắn kết trọn vẹn.</p>`,
+
         link: "chi-tiet.html"
     },
     {
@@ -43,6 +55,9 @@ const products = [
         price: 250,
         description: "Hoa cẩm tú cầu là biểu tượng của lòng biết ơn, sự chân thành và lời xin lỗi tinh tế. Nhờ kết cấu hàng trăm cánh hoa nhỏ gắn kết thành khối cầu viên mãn, loài hoa này còn đại diện cho tình yêu lứa đôi và sự thấu hiểu sâu sắc trong hôn nhân",
         image: "../assets/images/camtu2.jfif",
+        detail: `<p>Hoa cẩm tú cầu gây ấn tượng đặc biệt bởi khả năng đổi màu sắc kỳ diệu từ xanh, hồng, tím cho đến trắng tùy thuộc vào độ pH của đất trồng.</p>
+<p>Với kết cấu hàng trăm bông hoa nhỏ bốn cánh đan cài khăng khít tạo thành một khối cầu viên mãn, loài hoa này là biểu tượng tuyệt vời cho sự thấu hiểu sâu sắc, lòng biết ơn chân thành và tình cảm gia đình gắn kết trọn vẹn.</p>`,
+
         link: "chi-tiet.html"
     }
 ];
@@ -85,7 +100,7 @@ function createItem(obj) {
 
     // Tạo <p> chứa giá sản phẩm
     const price = document.createElement("p");
-    price.innerHTML = obj.price + "/ gói";
+    price.innerHTML = obj.price + "/ bó hoa";
 
     // Tạo <p> chứa mô tả sản phẩm 
     const description = document.createElement("p");

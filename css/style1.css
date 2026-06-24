@@ -1,97 +1,185 @@
-body {/* bảng ngoài cùng*/
-    font-family: Arial, sans-serif;/*pgoong chữ*/
-    background-color:#ffb3b3;
-    display: flex;/*căn chỉnh linh hoạt màn hình*/
-    justify-content: center; /*căn giữa chiều ngang*/
-	align-items: center;     /* Căn giữa theo chiều dọc */
-    padding: 20px;/*tạo khoảng đệm cho khung nhỏ lại hoặc bự ra*/
-	 min-height: 100vh;       /* Lấy hết chiều cao màn hình */
+/* ==========================================================================
+   1. ĐỊNH DẠNG CHUNG TOÀN TRANG
+   ========================================================================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f7; 
     margin: 0;
-}
-/*bảng thông tin chính*/
-.container {
-	text-align: center;      /* Căn giữa chữ và ảnh bên trong */
-    width: 70%;/*chiều rộng của cái khung bên trong*/
-    background:#ffccb3 ;
-   padding: 30px;/*Tạo khoảng cách trống giữa nội dung bên trong và mép viền*/
-   border-radius: 20px;/* bo  khung bên trong*/
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);/*tạo bóng*/
-    color:#331100 ; /*màu chữ*/
-	max-width: 600px;        /* Độ rộng tối đa của bảng */
-td, th {
-   border: 1px solid #333333; /*khung cho chữ*/
-   border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-}
-table {
-    margin: 0 auto;          /* Căn chính cái bảng ra giữa */
-    border-collapse: collapse;
-	
-}
-h2 {
-    text-align: center;/*can chữ giữa văn bản*/
-   text-transform: uppercase;/*tu dong chuyen sang chu in hoa*/
-    margin-bottom: 20px;/*tao khoang cach tiêu de va cai bang*/
-}
-
-.info-table {
-    width: 100%;
-   background-color: #f5f5dc; 
-    border-collapse:separate ;/*tạo dg vien cho hai khung*/
-    border-radius: 10px;/*bo  tron 4 goc*/
-    overflow: hidden; /*cat got khong loi ra ngoai*/
-    color: #333;         
-}
-
-.info-table td {/*tao vien,solid khong phai net dut,mau*/
-    border: 1px solid #d2b48c;
-    padding: 12 20pxpx;/*tạo khoang trống chu va ô*/
-	border-radius: 30px;
-}
-
-.avatar-cell {
-    text-align: center;
-    width: 140px;
-	 border: none !important;      /* Xóa viền khung đen */
-    background: transparent !important; /* Xóa luôn nền (nếu có) */
+    padding: 30px 20px; /* Giảm bớt padding trên dưới của trang */
+    color: #333333;
     text-align: center;
 }
 
-.avatar-cell img {
-    width: 140px;/*hai cái la kich thuoc anh*/
-    height: 140px;
-    border-radius: 50%; /*tron tuyet doi*/
-    border: 3px solid #6a1b9a;
-    object-fit: cover;/*giup anh ko bi mop hay keo dãn*/
-	display: block;             /* Giúp căn chỉnh chuẩn hơn */
-    margin: 0 auto;             /* Căn giữa ảnh */
-	
+/* ==========================================================================
+   2. KHUNG CONTAINER CHÍNH (Đã thu nhỏ chiều ngang để giảm khoảng trống)
+   ========================================================================== */
+#container {
+    max-width: 880px; /* Thu hẹp từ 1100px xuống 880px giúp ôm sát nội dung hơn */
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px; 
+    padding: 35px; /* Thu nhỏ khoảng cách viền trong */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); 
+    text-align: left;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px; /* Giảm khoảng cách giữa ảnh và các khối nội dung */
+    position: relative;
 }
 
-.highlight-text {
-    color: #b71c1c;
+/* ==========================================================================
+   3. CỘT TRÁI - HÌNH ẢNH SẢN PHẨM
+   ========================================================================== */
+#image {
+    width: 340px; /* Tinh chỉnh nhẹ kích thước ảnh cân đối với khung mới */
+    height: 340px;
+    object-fit: cover; 
+    border-radius: 12px;
+    border: 1px solid #f0f0f2;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+#image:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   4. CỘT PHẢI - THÔNG TIN SẢN PHẨM (Đã dịch chuyển sát về phía ảnh)
+   ========================================================================== */
+#container > p:not(#description) {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Tên sản phẩm (Dịch chuyển gần ảnh hơn) --- */
+#name {
+    position: absolute;
+    left: 410px; /* Kéo lùi từ 480px về 410px để sát vào cạnh phải của ảnh */
+    top: 35px;
+    font-size: 28px; /* Giảm nhẹ cỡ chữ giúp tổng thể gọn gàng hơn */
+    font-weight: 700;
+    color: #1d1d1f;
+    margin: 0;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+}
+
+#name::after {
+    content: "⭐⭐⭐⭐⭐ (4.9)  |  Đã bán 1.2k";
+    display: block;
+    font-size: 13px;
+    color: #77777a;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/* --- Khung hiển thị Giá tiền (Thu hẹp và kéo sát ảnh) --- */
+#price {
+    position: absolute;
+    left: 410px; /* Đồng bộ lùi về 410px để thẳng hàng với tên hoa */
+    top: 125px;
+    width: 435px; /* Thu hẹp chiều rộng khung giá từ 540px xuống còn 435px */
+    
+    font-size: 26px;
+    font-weight: 700;
+    color: #ee4d2d; 
+    background-color: #fbfbfb; 
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#price::after {
+    content: "FLASH SALE";
+    font-size: 11px;
     font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(270deg, #ff6a00, #ee4d2d);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 12px;
+    vertical-align: middle;
 }
 
-.section {
-    margin-top: 25px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
+/* ==========================================================================
+   5. TỰ ĐỘNG CHÈN NÚT MUA HÀNG VÀ CAM KẾT (Căn chỉnh lại tọa độ)
+   ========================================================================== */
+#description {
+    width: 100%;
+    margin-top: 25px; /* Giảm khoảng cách phía trên phần mô tả */
+    border-top: 1px solid #eaeaec;
+    padding-top: 25px;
+    font-size: 15px;
+    color: #424245;
+    line-height: 1.7;
 }
 
-.section h3 {
-    color: #ffeb3b;
-    border-bottom: 2px solid #ffeb3b;
+/* Chèn nút bấm (Dịch chuyển đồng bộ về 410px cho thẳng hàng đẹp mắt) */
+#description::before {
+    content: "🛒 Thêm vào giỏ hàng" "⚡ Mua ngay"; 
+    position: absolute;
+    left: 410px; /* Lùi về sát ảnh giống như tên và giá */
+    top: 215px; 
+    
+    font-size: 15px;
+    font-weight: 600;
+    word-spacing: 15px; 
+    color: #ffffff;
+    cursor: pointer;
+    
+    background-color: #ffffee;
+    border: 1px solid #ee4d2d;
+    color: #ee4d2d;
+    padding: 10px 22px;
+    border-radius: 6px;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
-ul {
-    padding-left: 20px;
+/* Chèn thêm các dòng cam kết vận chuyển */
+#detail::before {
+    content: "🚚 Miễn phí vận chuyển toàn quốc cho đơn hàng từ 500k \A 🛡️ Cam kết hoa tươi mới mỗi ngày - Hoàn tiền 100% nếu dập nát \A\A 📑 THÔNG TIN CHI TIẾT SẢN PHẨM:";
+    white-space: pre-wrap; 
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #28a745; 
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
-li {
-    margin-bottom: 8px;
+#detail {
+    width: 100%;
+    font-size: 15px;
+    color: #424245;
+    line-height: 1.7;
+    border-top: 1px dashed #eaeaec;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+/* ==========================================================================
+   6. NÚT QUAY TRỞ LẠI PHÍA DƯỚI CÙNG
+   ========================================================================== */
+a[href="page8.html"] {
+    display: inline-block;
+    margin-top: 25px;
+    color: #86868b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #d2d2d7;
+    padding: 8px 22px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+a[href="page8.html"]:hover {
+    background-color: #1d1d1f;
+    color: #ffffff;
+    border-color: #1d1d1f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
